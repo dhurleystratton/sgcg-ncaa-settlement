@@ -396,7 +396,7 @@ export default function HeroVictoryLane() {
                     </p>
                     
                     <p className="text-lg sm:text-xl leading-relaxed">
-                      The defendants will make payments into a settlement fund in equal amounts <a href="https://www.ncaa.org/news/2024/7/26/media-center-settlement-documents-filed-in-college-athletics-class-action-lawsuits.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">over the next 10 years</a>. For more information on the settlement, please consult the <a href="https://www.collegeathletecompensation.com" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">settlement website</a> established by class counsel.
+                      If the objections to the settlement are rejected on appeal, the defendants will make <a href="https://www.ncaa.org/news/2024/7/26/media-center-settlement-documents-filed-in-college-athletics-class-action-lawsuits.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">10 installment payments in equal amounts over a period of 9 years</a>. For more information on the settlement, please consult the <a href="https://www.collegeathletecompensation.com" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">settlement website</a> established by class counsel.
                     </p>
                   </div>
                 </div>
@@ -428,9 +428,11 @@ export default function HeroVictoryLane() {
               viewport={{ once: true }}
             >
               <div id="contact-form" className="bg-midnight/40 backdrop-blur-md border border-brand-teal/20 rounded-2xl p-6 sm:p-8 lg:p-10 h-full">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-brand-teal tracking-wide mb-6 text-center">
-                  Get Started Selling Your Claim
-                </h3>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-midnight bg-brand-teal px-6 py-4 rounded-lg tracking-wide inline-block">
+                    Get Started Selling Your Claim
+                  </h3>
+                </div>
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {/* Name */}
                   <div>
