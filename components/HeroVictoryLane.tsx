@@ -17,8 +17,6 @@ export default function HeroVictoryLane() {
     setSubmitMessage(null)
     
     const formData = new FormData(e.currentTarget)
-    const duringYearsSelect = e.currentTarget.duringYears as HTMLSelectElement
-    const selectedYears = Array.from(duringYearsSelect.selectedOptions).map(option => option.value)
     
     const data = {
       name: formData.get('name'),
@@ -26,7 +24,8 @@ export default function HeroVictoryLane() {
       phone: formData.get('phone'),
       sport: formData.get('sport'),
       school: formData.get('school'),
-      duringYears: selectedYears,
+      startYear: formData.get('startYear'),
+      endYear: formData.get('endYear'),
       message: formData.get('message')
     }
     
@@ -414,7 +413,7 @@ export default function HeroVictoryLane() {
                     </p>
                     
                     <p className="text-lg leading-relaxed">
-                      Our professionals have decades of experience purchasing claims, and in 2024 alone, structured transactions that provided over $380 million to plaintiffs and/or class members.
+                      SGCG professionals have decades of experience purchasing claims, and in 2024 alone, structured transactions that provided over $380 million to plaintiffs and/or class members.
                     </p>
                   </div>
                 </div>
@@ -511,26 +510,29 @@ export default function HeroVictoryLane() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="duringYears" className="block text-sm font-medium text-brand-teal mb-2">
+                        <label className="block text-sm font-medium text-brand-teal mb-2">
                           During Years
                         </label>
-                        <select
-                          id="duringYears"
-                          name="duringYears"
-                          multiple
-                          className="w-full px-4 py-3 min-h-[120px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
-                          required
-                        >
-                          <option value="2016">2016</option>
-                          <option value="2017">2017</option>
-                          <option value="2018">2018</option>
-                          <option value="2019">2019</option>
-                          <option value="2020">2020</option>
-                          <option value="2021">2021</option>
-                          <option value="2022">2022</option>
-                          <option value="2023">2023</option>
-                        </select>
-                        <p className="text-xs text-white/50 mt-1">Hold Ctrl/Cmd to select multiple years</p>
+                        <div className="grid grid-cols-2 gap-2">
+                          <input
+                            type="text"
+                            name="startYear"
+                            className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                            placeholder="Start"
+                            pattern="20(1[6-9]|2[0-3])"
+                            title="Year between 2016-2023"
+                            required
+                          />
+                          <input
+                            type="text"
+                            name="endYear"
+                            className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                            placeholder="End"
+                            pattern="20(1[6-9]|2[0-3])"
+                            title="Year between 2016-2023"
+                            required
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -583,15 +585,15 @@ export default function HeroVictoryLane() {
               </div>
             </motion.div>
           </div>
+          
+          {/* Disclaimer - Below the two columns */}
+          <div className="mt-8 px-4 sm:px-6">
+            <p className="text-center text-xs sm:text-sm text-white/50 italic">
+              Sycamore Grove is not affiliated with class counsel or the settlement administrator and is not providing legal, investment, or tax advice to class members.
+            </p>
+          </div>
         </div>
       </LazySection>
-
-      {/* Disclaimer - Fixed at very bottom */}
-      <div className="w-full bg-midnight py-4 px-4">
-        <p className="text-center text-xs sm:text-sm text-white/50 italic max-w-7xl mx-auto">
-          Sycamore Grove is not affiliated with class counsel or the settlement administrator and is not providing legal, investment, or tax advice to class members.
-        </p>
-      </div>
 
       {/* CSS Animation */}
       <style jsx>{`
