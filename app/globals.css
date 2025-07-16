@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Teko:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-teal: #439aa3;
+    --color-brand-dark-teal: #0a423b;
+    --color-brand-white: #FFFFFF;
+    --color-victory-red: #E31837;
+    --color-electric-green: #00FF87;
+    --color-energy-orange: #FF6B35;
+    --color-championship-gold: #FFB81C;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-inter text-gray-900 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bebas tracking-wide;
+  }
+
+  /* Teal scrollbar - Updated for better browser support */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #439aa3;
+    border-radius: 6px;
+    border: 2px solid #0A0A0A;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0a423b;
+  }
+
+  /* Firefox scrollbar support */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #439aa3 #0A0A0A;
+  }
+
+  /* For Chromium-based browsers - force style */
+  body::-webkit-scrollbar-thumb {
+    background-color: #439aa3 !important;
+  }
+
+  .gradient-brand {
+    background: linear-gradient(135deg, var(--color-brand-teal) 0%, var(--color-brand-dark-teal) 100%);
+  }
+
+  .gradient-brand-subtle {
+    background: linear-gradient(180deg, rgba(67, 154, 163, 0.03) 0%, rgba(10, 66, 59, 0.05) 100%);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-teal to-brand-dark-teal bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-brand-teal text-white font-semibold rounded-lg hover:bg-brand-dark-teal transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-victory-red text-victory-red font-semibold rounded-lg hover:bg-victory-red hover:text-white transition-all duration-300;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

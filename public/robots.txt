@@ -1,0 +1,51 @@
+# Robots.txt for NCAA Settlement Site
+# Allow all web crawlers
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://ncaa-settlement.com/sitemap.xml
+Sitemap: https://nilsettlement.com/sitemap.xml
+
+# Block access to API routes
+Disallow: /api/
+
+# Block access to private directories
+Disallow: /_next/
+Disallow: /config/
+
+# Allow search engines to access static assets
+Allow: /images/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+
+# Specific crawler instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

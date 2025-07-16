@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAA Settlement - Hero Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #0A0A0A;
+            background: white;
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(67, 154, 163, 0.03) 0%, rgba(10, 66, 59, 0.05) 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        h1 {
+            font-family: 'Bebas Neue', Impact, sans-serif;
+            font-size: 48px;
+            line-height: 1.1;
+            color: #0a423b;
+            margin-bottom: 24px;
+            letter-spacing: 0.02em;
+        }
+        
+        .nil-settlement {
+            color: #439aa3;
+            display: block;
+        }
+        
+        .subheadline {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .subheadline .now {
+            font-weight: 700;
+            color: #439aa3;
+        }
+        
+        .target-audience {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-bottom: 48px;
+            font-weight: 500;
+        }
+        
+        .cta-container {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+        
+        .btn {
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #439aa3;
+            color: white;
+            box-shadow: 0 4px 12px rgba(67, 154, 163, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #0a423b;
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #E31837;
+            color: #E31837;
+            background: transparent;
+        }
+        
+        .btn-secondary:hover {
+            background: #E31837;
+            color: white;
+        }
+        
+        .trust-indicator {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        @media (min-width: 768px) {
+            h1 { font-size: 120px; }
+            .subheadline { font-size: 28px; }
+            .target-audience { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="container">
+            <h1>
+                HOUSE VS NCAA
+                <span class="nil-settlement">(NIL) SETTLEMENT</span>
+            </h1>
+            
+            <p class="subheadline">
+                Get your settlement money <span class="now">now</span> instead of waiting 10 years
+            </p>
+            
+            <p class="target-audience">
+                Former Division I Athletes (2016-2024)
+            </p>
+            
+            <div class="cta-container">
+                <a href="#" class="btn btn-primary">Sell Your Claim</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+            
+            <p class="trust-indicator">
+                Powered by Sycamore Grove Claims Group • $380M+ Paid to Claimants
+            </p>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#439aa3" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Preview note -->
+    <div style="padding: 40px; background: #f5f5f5; text-align: center;">
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: #0a423b; margin-bottom: 20px;">
+            Hero Section Preview
+        </h2>
+        <p style="max-width: 600px; margin: 0 auto; line-height: 1.6; color: #666;">
+            This is a static preview of the hero section. The actual implementation includes smooth animations 
+            and will integrate with the rest of the site. The background uses a very subtle gradient to maintain 
+            a professional appearance while the bold typography creates athletic energy.
+        </p>
+    </div>
+</body>
+</html>

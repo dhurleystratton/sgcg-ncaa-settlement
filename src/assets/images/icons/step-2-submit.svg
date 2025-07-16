@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Step 2: Document with upload arrow - Submit Your Claim -->
+  <g>
+    <!-- Document -->
+    <path d="M16 8 L16 56 L48 56 L48 20 L36 8 Z" fill="#439aa3" opacity="0.1" stroke="#0a423b" stroke-width="2"/>
+    
+    <!-- Document fold -->
+    <path d="M36 8 L36 20 L48 20" fill="none" stroke="#0a423b" stroke-width="2"/>
+    
+    <!-- Upload arrow -->
+    <g transform="translate(32, 32)">
+      <!-- Arrow shaft -->
+      <rect x="-2" y="-8" width="4" height="16" fill="#439aa3"/>
+      <!-- Arrow head -->
+      <path d="M-8,-4 L0,-12 L8,-4" fill="none" stroke="#439aa3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Check marks on document -->
+    <g opacity="0.7">
+      <path d="M22 38 L25 41 L30 36" fill="none" stroke="#0a423b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M22 46 L25 49 L30 44" fill="none" stroke="#0a423b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Motion lines -->
+    <g opacity="0.4">
+      <line x1="20" y1="26" x2="20" y2="22" stroke="#439aa3" stroke-width="2" stroke-linecap="round"/>
+      <line x1="44" y1="26" x2="44" y2="22" stroke="#439aa3" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

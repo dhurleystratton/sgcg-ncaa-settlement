@@ -1,0 +1,271 @@
+/**
+ * NCAA Settlement Design Tokens
+ * 
+ * This file contains all design system tokens as CSS custom properties.
+ * These tokens implement the athletic-inspired design system for young former athletes.
+ */
+
+:root {
+  /* ==========================================================================
+     Color Palettes
+     ========================================================================== */
+  
+  /* Excellence Palette - Luxury & Authority */
+  --color-midnight-black: #0A0A0A;
+  --color-championship-gold: #D4AF37;
+  --color-deep-ocean: #0A423B;
+  --color-stadium-lights: #FFFFFF;
+  --color-urgent-crimson: #DC143C;
+  
+  /* Premium Neutrals */
+  --color-carbon: #1A1A1A;
+  --color-graphite: #2D2D2D;
+  --color-silver: #C0C0C0;
+  --color-platinum: #E5E4E2;
+  --color-pearl: #FAFAFA;
+  
+  /* Depth & Atmosphere */
+  --color-shadow-deep: rgba(10, 10, 10, 0.9);
+  --color-shadow-medium: rgba(10, 10, 10, 0.6);
+  --color-shadow-light: rgba(10, 10, 10, 0.3);
+  --color-glow-gold: rgba(212, 175, 55, 0.3);
+  --color-glow-white: rgba(255, 255, 255, 0.1);
+  
+  /* Semantic Color Mappings - Excellence Theme */
+  --color-primary: var(--color-championship-gold);
+  --color-primary-dark: #B8941F;
+  --color-primary-light: #E6C757;
+  --color-secondary: var(--color-deep-ocean);
+  --color-accent: var(--color-urgent-crimson);
+  --color-background: var(--color-midnight-black);
+  --color-surface: var(--color-carbon);
+  --color-text-primary: var(--color-stadium-lights);
+  --color-text-secondary: var(--color-silver);
+  --color-text-inverse: var(--color-midnight-black);
+  --color-success: var(--color-championship-gold);
+  --color-error: var(--color-urgent-crimson);
+  --color-warning: #FFA500;
+  --color-info: var(--color-deep-ocean);
+  
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  
+  /* Font Families */
+  --font-heading-primary: 'Bebas Neue', 'Impact', sans-serif;
+  --font-heading-secondary: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --font-body: 'Inter', 'San Francisco', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  /* Mobile-First Font Sizes - Architectural Scale */
+  --font-size-hero: 4rem;        /* 64px mobile */
+  --font-size-section: 2.5rem;   /* 40px */
+  --font-size-h1: 2rem;          /* 32px */
+  --font-size-h2: 1.75rem;       /* 28px */
+  --font-size-h3: 1.5rem;        /* 24px */
+  --font-size-body-large: 1.25rem; /* 20px */
+  --font-size-body: 1.125rem;    /* 18px */
+  --font-size-small: 1rem;       /* 16px */
+  --font-size-caption: 0.875rem; /* 14px */
+  
+  /* Line Heights */
+  --line-height-hero: 3.5rem;    /* 56px */
+  --line-height-section: 2.5rem; /* 40px */
+  --line-height-h1: 2.25rem;     /* 36px */
+  --line-height-h2: 2rem;        /* 32px */
+  --line-height-h3: 1.75rem;     /* 28px */
+  --line-height-body-large: 1.75rem; /* 28px */
+  --line-height-body: 1.5rem;    /* 24px */
+  --line-height-small: 1.25rem;  /* 20px */
+  --line-height-caption: 1rem;   /* 16px */
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  
+  /* ==========================================================================
+     Spacing Scale (8px Grid)
+     ========================================================================== */
+  
+  --space-0: 0;
+  --space-1: 0.5rem;    /* 8px */
+  --space-2: 1rem;      /* 16px */
+  --space-3: 1.5rem;    /* 24px */
+  --space-4: 2rem;      /* 32px */
+  --space-5: 2.5rem;    /* 40px */
+  --space-6: 3rem;      /* 48px */
+  --space-7: 3.5rem;    /* 56px */
+  --space-8: 4rem;      /* 64px */
+  --space-10: 5rem;     /* 80px */
+  --space-12: 6rem;     /* 96px */
+  --space-16: 8rem;     /* 128px */
+  --space-20: 10rem;    /* 160px */
+  
+  /* Component-specific spacing */
+  --space-button-padding-x: var(--space-4);
+  --space-button-padding-y: var(--space-2);
+  --space-input-padding-x: var(--space-2);
+  --space-input-padding-y: var(--space-2);
+  --space-card-padding: var(--space-3);
+  --space-section-padding-mobile: var(--space-6);
+  --space-section-padding-desktop: var(--space-10);
+  
+  /* ==========================================================================
+     Animation & Motion
+     ========================================================================== */
+  
+  /* Timing Functions */
+  --ease-swift: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-power: cubic-bezier(0.4, 0.0, 0.0, 1);
+  --ease-smooth: cubic-bezier(0.4, 0.0, 0.6, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Duration Scale */
+  --duration-instant: 100ms;
+  --duration-quick: 200ms;
+  --duration-normal: 300ms;
+  --duration-moderate: 500ms;
+  --duration-slow: 700ms;
+  --duration-deliberate: 1000ms;
+  
+  /* Default Animation Settings */
+  --transition-default: all var(--duration-normal) var(--ease-swift);
+  --transition-hover: all var(--duration-quick) var(--ease-swift);
+  --transition-focus: all var(--duration-instant) var(--ease-swift);
+  
+  /* ==========================================================================
+     Layout & Breakpoints
+     ========================================================================== */
+  
+  /* Breakpoint Values */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Container Max Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --container-2xl: 1400px;
+  
+  /* Container Padding */
+  --container-padding-mobile: var(--space-2);
+  --container-padding-tablet: var(--space-3);
+  --container-padding-desktop: var(--space-4);
+  
+  /* ==========================================================================
+     Component Tokens
+     ========================================================================== */
+  
+  /* Borders & Radius */
+  --border-radius-none: 0;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+  
+  /* Border Widths */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Focus States */
+  --focus-ring-width: 3px;
+  --focus-ring-color: var(--color-primary);
+  --focus-ring-offset: 2px;
+  
+  /* Button Specific */
+  --button-height-sm: 2.5rem;    /* 40px */
+  --button-height-md: 3rem;      /* 48px */
+  --button-height-lg: 3.5rem;    /* 56px */
+  --button-height-xl: 4rem;      /* 64px */
+  
+  /* Input Specific */
+  --input-height: 3rem;          /* 48px */
+  --input-border-color: var(--color-cool-gray);
+  --input-focus-border-color: var(--color-primary);
+  --input-placeholder-color: var(--color-concrete-gray);
+  
+  /* Z-Index Scale */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+}
+
+/* ==========================================================================
+   Desktop Adjustments
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  :root {
+    /* Architectural font sizes for desktop */
+    --font-size-hero: 12.5rem;     /* 200px - Arena scale */
+    --font-size-section: 5rem;     /* 80px */
+    --font-size-h1: 3.75rem;       /* 60px */
+    --font-size-h2: 2.5rem;        /* 40px */
+    
+    /* Adjusted line heights for desktop */
+    --line-height-hero: 11rem;     /* 176px */
+    --line-height-section: 4.5rem; /* 72px */
+    --line-height-h1: 3.5rem;      /* 56px */
+    --line-height-h2: 3rem;        /* 48px */
+  }
+}
+
+/* ==========================================================================
+   Motion Preferences
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-quick: 0ms;
+    --duration-normal: 0ms;
+    --duration-moderate: 0ms;
+    --duration-slow: 0ms;
+    --duration-deliberate: 0ms;
+  }
+}
+
+/* ==========================================================================
+   Dark Mode Support (Optional)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Invert primary colors for dark mode if needed */
+    --color-background: var(--color-deep-black);
+    --color-surface: var(--color-steel-gray);
+    --color-text-primary: var(--color-pure-white);
+    --color-text-secondary: var(--color-light-gray);
+    --color-text-inverse: var(--color-deep-black);
+  }
+}

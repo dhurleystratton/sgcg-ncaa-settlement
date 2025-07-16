@@ -1,0 +1,25 @@
+{
+  "mainSite": "https://www.sycamoregroveclaims.com",
+  "social": {
+    "twitter": "https://x.com/NILsettlement",
+    "linkedin": "https://www.linkedin.com/company/sycamore-grove-claims-group/about/",
+    "instagram": "https://www.instagram.com/ncaasettlement/"
+  },
+  "legal": {
+    "privacy": "#",
+    "terms": "#"
+  },
+  "contact": {
+    "phone": "#",
+    "email": "#"
+  },
+  "cta": {
+    "sellClaim": "#contact-form",
+    "calculator": "#",
+    "brandAmbassador": "#"
+  },
+  "external": {
+    "ncaaSettlement": "#",
+    "learnMore": "https://www.sycamoregroveclaims.com"
+  }
+}
