@@ -275,7 +275,7 @@ export default function HeroVictoryLane() {
                 
                 <motion.a
                   href="#contact-form"
-                  className="relative inline-block text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-brand-teal tracking-wider px-4 sm:px-8 py-3 cursor-pointer hover:scale-105 transition-transform"
+                  className="relative inline-block text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-brand-teal tracking-wider px-4 sm:px-8 py-3 cursor-pointer hover:scale-105 hover:bg-brand-teal/10 transition-all duration-300 rounded-lg"
                   onClick={(e) => {
                     e.preventDefault();
                     const element = document.getElementById('contact-form');
@@ -340,7 +340,7 @@ export default function HeroVictoryLane() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base">
-            <span className="font-semibold text-brand-teal">Sycamore Grove Claims Group</span>
+            <span className="font-semibold text-white">Sycamore Grove Claims Group</span>
             <span className="hidden md:inline text-brand-teal/40">•</span>
             <Link 
               href="https://www.sycamoregroveclaims.com/nil-settlement" 
@@ -579,7 +579,15 @@ export default function HeroVictoryLane() {
                   
                   {/* Privacy Notice */}
                   <p className="text-sm text-white/50 text-center">
-                    By submitting, you agree to our privacy policy and terms of service.
+                    By submitting, you agree to our privacy policy and{' '}
+                    <Link 
+                      href="https://www.sycamoregroveclaims.com/terms-conditions" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-white/70 transition-colors"
+                    >
+                      terms of service
+                    </Link>.
                   </p>
                 </form>
               </div>
