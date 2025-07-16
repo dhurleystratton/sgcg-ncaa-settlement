@@ -204,14 +204,28 @@ All updates made to the athletic theme (black background with teal):
 - ✅ SEO setup completed
 - ✅ Form functionality implemented
 - ✅ All URLs properly configured
+- ✅ Favicon implemented with tree-only logo
+- ✅ All compliance-required copy changes implemented (2025-01-16)
+- ✅ Sport dropdown added to form
+- ✅ Preview site deployed to Netlify
+
+## Latest Deployment (2025-01-16)
+- **Preview URL**: https://sgcg-ncaa-settlement.netlify.app
+- **Status**: Live preview shared with team for approval
+- **GitHub Repo**: https://github.com/dhurleystratton/sgcg-ncaa-settlement
+- **Deployment Platform**: Netlify (auto-deploys from GitHub main branch)
 
 ## Revision Tracking
-**For Internal Review Feedback:**
-<!-- Add any requested changes here during approval process -->
-- [ ] Pending: Awaiting internal feedback
-- [ ] TBD: Any text changes requested
-- [ ] TBD: Any design adjustments needed
-- [ ] TBD: Additional functionality requests
+**Final Changes Before Preview (2025-01-16):**
+- ✅ Removed "or" and "NCAA defendants..." text from hero
+- ✅ Increased "(NIL) SETTLEMENT" font size by 25%
+- ✅ Updated footer Learn More link to /nil-settlement page
+- ✅ Replaced all bullet points with compliant copy
+- ✅ Added required hyperlinks to settlement information
+- ✅ Updated SGCG description with accelerated payments messaging
+- ✅ Replaced $380M highlight with disclaimer text
+- ✅ Removed contact form header/subheader
+- ✅ Removed unused calculator files causing build errors
 
 ## Post-Approval Go-Live Tasks
 
@@ -285,47 +299,77 @@ All updates made to the athletic theme (black background with teal):
 - Athletic imagery crucial for connecting with target audience
 - User feedback should be taken literally, not interpreted
 
-## 🚀 NEXT SESSION CHECKLIST
+## 🚀 GO-LIVE CHECKLIST (After Approval)
 
-### If Approved - Netlify Deployment:
-1. **Email Service Setup**
-   - Choose provider (SendGrid/AWS SES/Resend)
-   - Update `/app/api/contact/route.ts` with email code
-   - Add API keys to environment variables
-   - Test email delivery to all 4 recipients
+### 1. **Email Service Setup** (PRIORITY)
+Choose one provider and implement:
 
-2. **Netlify Configuration**
-   - Connect GitHub repository
-   - Configure build command: `npm run build`
-   - Set publish directory: `.next`
-   - Add environment variables
-   - Configure both domains (ncaa-settlement.com, nilsettlement.com)
+#### Option A: Resend (Recommended - Easiest)
+```bash
+npm install resend
+```
+- Sign up at resend.com
+- Get API key
+- Add to Netlify env: `RESEND_API_KEY`
+- Update `/app/api/contact/route.ts` with Resend code
 
-3. **Domain Migration**
-   - Remove Squarespace redirects
-   - Update DNS settings
-   - Verify SSL certificates
-   - Test both domains
+#### Option B: SendGrid
+- More complex setup but very reliable
+- Requires domain verification
+- Better for high volume
 
-### If Revisions Needed:
-- Check "Revision Tracking" section above
-- All components are in `/components/` folder
-- Primary theme: `HeroVictoryLane.tsx`
-- Form endpoint: `/app/api/contact/route.ts`
-- URL config: `/config/links-config.json`
+#### Option C: AWS SES
+- Most cost-effective for high volume
+- Requires AWS account setup
 
-### Key Files for Quick Reference:
+### 2. **Domain Migration Steps**
+
+#### Remove Squarespace Redirects:
+1. Log into Squarespace dashboard
+2. Navigate to Settings → Domains
+3. Find ncaa-settlement.com redirect
+4. Find nil-settlement.com redirect  
+5. Remove/disable both redirects
+6. Note down current DNS settings
+
+#### Connect Domains to Netlify:
+1. In Netlify: Domain settings → Add custom domain
+2. Add `ncaa-settlement.com`
+3. Add `nil-settlement.com`
+4. Follow Netlify's DNS instructions
+5. Update nameservers at domain registrar
+6. SSL certificates auto-provision (takes ~10-30 min)
+
+### 3. **Final Testing Checklist**
+- [ ] Test contact form with real email service
+- [ ] Verify emails arrive to all 3 recipients
+- [ ] Check both domains resolve correctly
+- [ ] Verify SSL certificates are active
+- [ ] Test all links and navigation
+- [ ] Mobile device testing
+- [ ] Run Google PageSpeed test
+
+### 4. **Environment Variables for Netlify**
+Add these in Netlify dashboard:
+- `RESEND_API_KEY` (or chosen email service key)
+- `NEXT_PUBLIC_SITE_URL` (update to live domain)
+
+### 5. **Monitor After Launch**
+- Check Netlify analytics
+- Monitor form submissions
+- Watch for any 404 errors
+- Check site uptime
+
+### Key Files Reference:
 - **Main Component**: `/components/HeroVictoryLane.tsx`
-- **Layout/SEO**: `/app/layout.tsx`
-- **Styles**: `/app/globals.css`
-- **Form API**: `/app/api/contact/route.ts`
-- **URLs**: `/config/links-config.json`
+- **Email Handler**: `/app/api/contact/route.ts` (needs email service code)
+- **Links Config**: `/config/links-config.json`
 
-### Contact/Phone Info Still Needed:
+### Still Needed (Optional):
 - Phone number for contact link
-- Email address for contact link
-- Privacy policy URL
-- Terms of service URL
+- Direct email for contact link
+- Privacy policy page/URL
+- Terms of service page/URL
 
 ---
 *This document serves as persistent memory for the project. Update after every significant decision or discovery.*
