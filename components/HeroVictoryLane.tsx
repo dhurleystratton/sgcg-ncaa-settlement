@@ -429,7 +429,7 @@ export default function HeroVictoryLane() {
             >
               <div id="contact-form" className="bg-brand-teal backdrop-blur-md border-2 border-black rounded-2xl p-6 sm:p-8 lg:p-10 h-full">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-brand-teal bg-white px-6 py-4 rounded-lg tracking-wide inline-block">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-brand-teal bg-black px-6 py-4 rounded-lg tracking-wide inline-block">
                     Get Started Selling Your Claim
                   </h3>
                 </div>
@@ -443,7 +443,7 @@ export default function HeroVictoryLane() {
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                       placeholder="John Smith"
                       required
                     />
@@ -458,7 +458,7 @@ export default function HeroVictoryLane() {
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                       placeholder="john@email.com"
                       required
                     />
@@ -473,7 +473,7 @@ export default function HeroVictoryLane() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -486,7 +486,7 @@ export default function HeroVictoryLane() {
                     <select
                       id="sport"
                       name="sport"
-                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                     >
                       <option value="">Select a sport</option>
                       <option value="Football">Football</option>
@@ -506,7 +506,7 @@ export default function HeroVictoryLane() {
                           type="text"
                           id="school"
                           name="school"
-                          className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                          className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                           placeholder="University name"
                           required
                         />
@@ -519,7 +519,7 @@ export default function HeroVictoryLane() {
                           <input
                             type="text"
                             name="startYear"
-                            className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                            className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                             placeholder="Start"
                             pattern="20(1[6-9]|2[0-3])"
                             title="Year between 2016-2023"
@@ -528,7 +528,7 @@ export default function HeroVictoryLane() {
                           <input
                             type="text"
                             name="endYear"
-                            className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+                            className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all"
                             placeholder="End"
                             pattern="20(1[6-9]|2[0-3])"
                             title="Year between 2016-2023"
@@ -548,7 +548,7 @@ export default function HeroVictoryLane() {
                       id="message"
                       name="message"
                       rows={3}
-                      className="w-full px-4 py-3 min-h-[100px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-none"
+                      className="w-full px-4 py-3 min-h-[100px] bg-white border border-black/30 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-brand-teal transition-all resize-none"
                       placeholder="Sport played, school, or any questions..."
                     />
                   </div>
