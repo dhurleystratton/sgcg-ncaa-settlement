@@ -396,7 +396,7 @@ export default function HeroVictoryLane() {
                     </p>
                     
                     <p className="text-lg sm:text-xl leading-relaxed">
-                      If the objections to the settlement are rejected on appeal, the defendants will make <a href="https://www.ncaa.org/news/2024/7/26/media-center-settlement-documents-filed-in-college-athletics-class-action-lawsuits.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">10 installment payments in equal amounts over a period of 9 years</a>. For more information on the settlement, please consult the <a href="https://www.collegeathletecompensation.com" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">settlement website</a> established by class counsel.
+                      The defendants (NCAA and Power Five Conferences) will make payments into a settlement fund in <a href="https://www.ncaa.org/news/2024/7/26/media-center-settlement-documents-filed-in-college-athletics-class-action-lawsuits.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">equal, annual installments over the course of 10 years</a>. For more information on the settlement, please consult the <a href="https://collegeathletecompensation.com" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-brand-teal/80 underline underline-offset-2 transition-colors">settlement website</a> established by class counsel.
                     </p>
                   </div>
                 </div>
@@ -409,7 +409,7 @@ export default function HeroVictoryLane() {
                   
                   <div className="space-y-4 text-white/80">
                     <p className="text-lg leading-relaxed">
-                      With the defendants scheduled to make payments over a 10-year period, eligible class members will be forced to wait for over a decade to receive the full amount they are owed. <span className="font-bold text-white">Sycamore Grove Claims Group</span> can provide a tailored solution to accelerate payments.
+                      With the defendants scheduled to make payments into the settlement fund over the course of 10 years, and with any payments to athletes out of the fund blocked until after all possible appeals have been exhausted, eligible class members may be forced to wait for over a decade to receive the full amount they are owed. <span className="font-bold text-white">Sycamore Grove</span> can provide a tailored solution to accelerate payments.
                     </p>
                     
                     <p className="text-lg leading-relaxed">
