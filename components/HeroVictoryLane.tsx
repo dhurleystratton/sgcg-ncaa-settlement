@@ -583,14 +583,18 @@ export default function HeroVictoryLane() {
                   <p className="text-sm text-white/80 text-center">
                     By submitting, you agree to our{' '}
                     <Link 
-                      href="/privacy-policy" 
+                      href="https://www.sycamoregroveclaims.com/privacy-policy" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="underline hover:text-white transition-colors"
                     >
                       privacy policy
                     </Link>{' '}
                     and{' '}
                     <Link 
-                      href="/terms-and-conditions" 
+                      href="https://www.sycamoregroveclaims.com/terms-conditions" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="underline hover:text-white transition-colors"
                     >
                       terms of service
