@@ -427,23 +427,23 @@ export default function HeroVictoryLane() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div id="contact-form" className="bg-midnight/40 backdrop-blur-md border border-brand-teal/20 rounded-2xl p-6 sm:p-8 lg:p-10 h-full">
+              <div id="contact-form" className="bg-brand-teal backdrop-blur-md border-2 border-black rounded-2xl p-6 sm:p-8 lg:p-10 h-full">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-midnight bg-brand-teal px-6 py-4 rounded-lg tracking-wide inline-block">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-brand-teal bg-white px-6 py-4 rounded-lg tracking-wide inline-block">
                     Get Started Selling Your Claim
                   </h3>
                 </div>
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-brand-teal mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                       Full Name
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       placeholder="John Smith"
                       required
                     />
@@ -451,14 +451,14 @@ export default function HeroVictoryLane() {
                   
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-brand-teal mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                       Email Address
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       placeholder="john@email.com"
                       required
                     />
@@ -466,27 +466,27 @@ export default function HeroVictoryLane() {
                   
                   {/* Phone */}
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-brand-teal mb-2">
-                      Phone Number <span className="text-white/50">(optional)</span>
+                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                      Phone Number <span className="text-white/70">(optional)</span>
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
-                      className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                       placeholder="(555) 123-4567"
                     />
                   </div>
                   
                   {/* Sport */}
                   <div>
-                    <label htmlFor="sport" className="block text-sm font-medium text-brand-teal mb-2">
-                      Sport <span className="text-white/50">(optional)</span>
+                    <label htmlFor="sport" className="block text-sm font-medium text-white mb-2">
+                      Sport <span className="text-white/70">(optional)</span>
                     </label>
                     <select
                       id="sport"
                       name="sport"
-                      className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                      className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                     >
                       <option value="">Select a sport</option>
                       <option value="Football">Football</option>
@@ -499,27 +499,27 @@ export default function HeroVictoryLane() {
                   <div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="school" className="block text-sm font-medium text-brand-teal mb-2">
+                        <label htmlFor="school" className="block text-sm font-medium text-white mb-2">
                           School
                         </label>
                         <input
                           type="text"
                           id="school"
                           name="school"
-                          className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                          className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                           placeholder="University name"
                           required
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-brand-teal mb-2">
+                        <label className="block text-sm font-medium text-white mb-2">
                           During Years
                         </label>
                         <div className="grid grid-cols-2 gap-2">
                           <input
                             type="text"
                             name="startYear"
-                            className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                            className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                             placeholder="Start"
                             pattern="20(1[6-9]|2[0-3])"
                             title="Year between 2016-2023"
@@ -528,7 +528,7 @@ export default function HeroVictoryLane() {
                           <input
                             type="text"
                             name="endYear"
-                            className="w-full px-4 py-3 min-h-[48px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all"
+                            className="w-full px-4 py-3 min-h-[48px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                             placeholder="End"
                             pattern="20(1[6-9]|2[0-3])"
                             title="Year between 2016-2023"
@@ -541,14 +541,14 @@ export default function HeroVictoryLane() {
                   
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-brand-teal mb-2">
-                      Additional Information <span className="text-white/50">(optional)</span>
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                      Additional Information <span className="text-white/70">(optional)</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={3}
-                      className="w-full px-4 py-3 min-h-[100px] bg-midnight/50 border border-brand-teal/30 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition-all resize-none"
+                      className="w-full px-4 py-3 min-h-[100px] bg-white border border-black/20 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-none"
                       placeholder="Sport played, school, or any questions..."
                     />
                   </div>
@@ -557,7 +557,7 @@ export default function HeroVictoryLane() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-6 bg-brand-teal text-midnight font-bold text-lg rounded-lg hover:bg-brand-teal/90 transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-brand-teal/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-4 px-6 bg-midnight text-white font-bold text-lg rounded-lg hover:bg-black transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-black/50 disabled:opacity-50 disabled:cursor-not-allowed"
                     whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                     whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   >
@@ -580,13 +580,13 @@ export default function HeroVictoryLane() {
                   )}
                   
                   {/* Privacy Notice */}
-                  <p className="text-sm text-white/50 text-center">
+                  <p className="text-sm text-white/80 text-center">
                     By submitting, you agree to our privacy policy and{' '}
                     <Link 
                       href="https://www.sycamoregroveclaims.com/terms-conditions" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-white/70 transition-colors"
+                      className="underline hover:text-white transition-colors"
                     >
                       terms of service
                     </Link>.
