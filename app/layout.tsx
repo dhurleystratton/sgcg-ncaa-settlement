@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     siteName: 'NCAA Settlement by SGCG',
     images: [
       {
-        url: 'https://ncaa-settlement.com/og-image.svg',
+        url: 'https://ncaa-settlement.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'NCAA Settlement - Sell Your NIL Claim',
-        type: 'image/svg+xml',
+        type: 'image/png',
       }
     ],
     locale: 'en_US',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NCAA Settlement - Get Paid Now',
     description: 'Sell your NIL settlement claim for immediate payment',
-    images: ['https://ncaa-settlement.com/og-image.svg'],
+    images: ['https://ncaa-settlement.com/og-image.png'],
     creator: '@sycamoregroveclaims',
     site: '@NILsettlement',
   },
