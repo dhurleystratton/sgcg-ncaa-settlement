@@ -5,11 +5,14 @@
   <title>Contact Form Handler</title>
 </head>
 <body>
-  <h1>Processing Form...</h1>
   <!-- This form is detected and processed by Netlify -->
-  <form name="contact" method="POST" data-netlify="true">
-    <input type="text" name="name" />
-    <input type="email" name="email" />
+  <form name="contact" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden>
+      <label>Don't fill this out: <input name="bot-field" /></label>
+    </p>
+    <input type="text" name="name" required />
+    <input type="email" name="email" required />
     <input type="tel" name="phone" />
     <select name="sport">
       <option value="">Select a sport</option>
@@ -17,10 +20,11 @@
       <option value="Basketball">Basketball</option>
       <option value="Other">Other</option>
     </select>
-    <input type="text" name="school" />
-    <input type="text" name="startYear" />
-    <input type="text" name="endYear" />
+    <input type="text" name="school" required />
+    <input type="text" name="startYear" required />
+    <input type="text" name="endYear" required />
     <textarea name="message"></textarea>
+    <button type="submit">Submit</button>
   </form>
 </body>
 </html>

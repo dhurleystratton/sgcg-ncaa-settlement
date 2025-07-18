@@ -4,46 +4,9 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Twitter, Linkedin, Instagram } from 'lucide-react'
-import { useState } from 'react'
 import LazySection from './LazySection'
 
 export default function HeroVictoryLane() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState<{type: 'success' | 'error', text: string} | null>(null)
-  
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitMessage(null)
-    
-    const form = e.currentTarget
-    const formData = new FormData(form)
-    
-    try {
-      const response = await fetch('/contact.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      })
-      
-      if (response.ok) {
-        setSubmitMessage({
-          type: 'success',
-          text: 'Thank you! We\'ll contact you within 24 hours.'
-        })
-        form.reset()
-      } else {
-        throw new Error('Form submission failed')
-      }
-    } catch (error) {
-      setSubmitMessage({
-        type: 'error',
-        text: 'Failed to submit form. Please try again.'
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
   return (
     <>
       <section className="relative min-h-screen bg-midnight overflow-hidden flex flex-col">
@@ -418,8 +381,9 @@ export default function HeroVictoryLane() {
                 <form 
                   name="contact"
                   method="POST"
+                  action="/success.html"
+                  data-netlify="true"
                   className="space-y-6"
-                  onSubmit={handleSubmit}
                 >
                   {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
@@ -551,29 +515,12 @@ export default function HeroVictoryLane() {
                   {/* Submit Button */}
                   <motion.button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-4 px-6 bg-midnight text-white font-bold text-lg rounded-lg hover:bg-black transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-black/50 disabled:opacity-50 disabled:cursor-not-allowed"
-                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                    className="w-full py-4 px-6 bg-midnight text-white font-bold text-lg rounded-lg hover:bg-black transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-black/50"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    {isSubmitting ? 'SUBMITTING...' : 'SUBMIT CLAIM INFORMATION'}
+                    SUBMIT CLAIM INFORMATION
                   </motion.button>
-                  
-                  {/* Success/Error Message */}
-                  {submitMessage && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className={`p-4 rounded-lg text-center ${
-                        submitMessage.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-500/30' 
-                          : 'bg-red-500/20 text-red-300 border border-red-500/30'
-                      }`}
-                    >
-                      {submitMessage.text}
-                    </motion.div>
-                  )}
-                  
                   
                   {/* Privacy Notice */}
                   <p className="text-sm text-white/80 text-center">
