@@ -25,8 +25,8 @@ export default function HeroVictoryLane() {
         ...Object.fromEntries(formData)
       }).toString()
       
-      // Submit to Netlify Forms
-      const response = await fetch('/', {
+      // Submit to Netlify Forms  
+      const response = await fetch('/contact.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encodedData
