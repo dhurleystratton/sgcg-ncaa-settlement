@@ -25,13 +25,19 @@ export default function HeroVictoryLane() {
         ...Object.fromEntries(formData)
       }).toString()
       
+      console.log('Submitting to Netlify Forms:', encodedData)
+      
       // Submit to Netlify Forms  
-      const response = await fetch('/contact.html', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encodedData
       })
       
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+      
+      // Netlify forms typically return 200 or 303
       if (response.ok) {
         setSubmitMessage({
           type: 'success',
