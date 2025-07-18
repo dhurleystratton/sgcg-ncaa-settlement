@@ -92,6 +92,23 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-midnight">
+        {/* Hidden form for Netlify detection */}
+        <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <select name="sport">
+            <option value="">Select a sport</option>
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="text" name="school" />
+          <input type="text" name="startYear" />
+          <input type="text" name="endYear" />
+          <textarea name="message"></textarea>
+          <input type="text" name="bot-field" />
+        </form>
         {children}
       </body>
     </html>
