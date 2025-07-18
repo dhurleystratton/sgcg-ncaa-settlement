@@ -1,0 +1,10 @@
+# Security Policy for ncaa-settlement.com
+
+Contact: security@sycamoregroveclaims.com
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://ncaa-settlement.com/.well-known/security.txt
+
+# Reporting Security Issues
+If you discover a security vulnerability, please email security@sycamoregroveclaims.com
+We appreciate your efforts to responsibly disclose your findings.

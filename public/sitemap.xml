@@ -12,6 +12,16 @@
     <lastmod>2025-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ncaa-settlement.com/images/logo/SGCG Logo Color.png</image:loc>
+      <image:title>Sycamore Grove Claims Group Logo</image:title>
+      <image:caption>SGCG - Trusted partner for NCAA settlement claims</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ncaa-settlement.com/og-image.png</image:loc>
+      <image:title>NCAA Settlement - Get Paid Now</image:title>
+      <image:caption>Former D1 athletes can sell their NIL claims for immediate payment</image:caption>
+    </image:image>
   </url>
   
   <!-- NIL Settlement page -->
@@ -20,6 +30,14 @@
     <lastmod>2025-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Alternate domain entries -->
+  <url>
+    <loc>https://nil-settlement.com/</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   
 </urlset>

@@ -1,0 +1,10 @@
+google-site-verification: [YOUR_VERIFICATION_CODE_HERE]
+
+Instructions:
+1. Go to https://search.google.com/search-console
+2. Add property for ncaa-settlement.com
+3. Choose "HTML file upload" verification method
+4. Download their verification file
+5. Replace this file with the one they provide
+6. Click "Verify" in Search Console
+7. Submit sitemap: https://ncaa-settlement.com/sitemap.xml

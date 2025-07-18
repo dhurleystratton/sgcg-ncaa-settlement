@@ -1,0 +1,5 @@
+# Ads.txt - NCAA Settlement Site
+# This file indicates the site doesn't serve programmatic advertising
+# Having this file prevents ad fraud warnings
+
+placeholder.example.com, placeholder, DIRECT, placeholder
