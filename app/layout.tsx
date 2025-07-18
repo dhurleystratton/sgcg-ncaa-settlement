@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'NCAA Settlement by SGCG',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://ncaa-settlement.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'NCAA Settlement - Sell Your NIL Claim',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NCAA Settlement - Get Paid Now',
     description: 'Sell your NIL settlement claim for immediate payment',
-    images: ['/og-image.png'],
+    images: ['https://ncaa-settlement.com/og-image.png'],
     creator: '@sycamoregroveclaims',
   },
   robots: {
@@ -49,6 +49,33 @@ export const metadata: Metadata = {
     },
   },
   category: 'finance',
+  alternates: {
+    canonical: 'https://ncaa-settlement.com',
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'NCAA Settlement - Sell Your NIL Claim',
+  description: 'Get your House vs NCAA (NIL) settlement money now. Former D1 athletes (2016-2024) can sell their claims for immediate payment.',
+  url: 'https://ncaa-settlement.com',
+  provider: {
+    '@type': 'Organization',
+    name: 'Sycamore Grove Claims Group',
+    url: 'https://www.sycamoregroveclaims.com',
+    logo: 'https://ncaa-settlement.com/sgcg-logo.png',
+    sameAs: [
+      'https://x.com/NILsettlement',
+      'https://www.instagram.com/ncaasettlement/',
+      'https://www.linkedin.com/company/sycamore-grove-claims-group/'
+    ]
+  },
+  potentialAction: {
+    '@type': 'ContactAction',
+    target: 'https://ncaa-settlement.com#contact-form',
+    name: 'Submit Claim Information'
+  }
 }
 
 export default function RootLayout({
@@ -58,6 +85,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-midnight">
         {children}
       </body>

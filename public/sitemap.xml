@@ -9,33 +9,17 @@
   <!-- Main landing page -->
   <url>
     <loc>https://ncaa-settlement.com/</loc>
-    <lastmod>2025-01-14</lastmod>
+    <lastmod>2025-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Alternative domain -->
+  <!-- NIL Settlement page -->
   <url>
-    <loc>https://nilsettlement.com/</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Privacy Policy (when added) -->
-  <url>
-    <loc>https://ncaa-settlement.com/privacy-policy</loc>
-    <lastmod>2025-01-14</lastmod>
+    <loc>https://ncaa-settlement.com/nil-settlement</loc>
+    <lastmod>2025-01-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Terms of Service (when added) -->
-  <url>
-    <loc>https://ncaa-settlement.com/terms-of-service</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
   
 </urlset>

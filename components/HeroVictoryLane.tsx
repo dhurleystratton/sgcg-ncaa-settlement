@@ -18,39 +18,25 @@ export default function HeroVictoryLane() {
     
     const formData = new FormData(e.currentTarget)
     
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      sport: formData.get('sport'),
-      school: formData.get('school'),
-      startYear: formData.get('startYear'),
-      endYear: formData.get('endYear'),
-      message: formData.get('message')
-    }
-    
     try {
-      const response = await fetch('/api/contact', {
+      // Submit to Netlify Forms
+      const response = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
       })
-      
-      const result = await response.json()
       
       if (response.ok) {
         setSubmitMessage({
           type: 'success',
-          text: result.message || 'Thank you! We\'ll contact you within 24 hours.'
+          text: 'Thank you! We\'ll contact you within 24 hours.'
         })
         // Reset form
         e.currentTarget.reset()
       } else {
         setSubmitMessage({
           type: 'error',
-          text: result.error || 'Something went wrong. Please try again.'
+          text: 'Something went wrong. Please try again.'
         })
       }
     } catch (error) {
@@ -433,7 +419,22 @@ export default function HeroVictoryLane() {
                     Get Started Selling Your Claim
                   </h3>
                 </div>
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form 
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  className="space-y-6" 
+                  onSubmit={handleSubmit}
+                >
+                  {/* Hidden fields for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>
+                      Don't fill this out: <input name="bot-field" />
+                    </label>
+                  </p>
+                  
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
