@@ -4,62 +4,10 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Twitter, Linkedin, Instagram } from 'lucide-react'
-import { useState } from 'react'
 import LazySection from './LazySection'
 
 export default function HeroVictoryLane() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState<{type: 'success' | 'error', text: string} | null>(null)
-  
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const form = e.currentTarget
-    setIsSubmitting(true)
-    setSubmitMessage(null)
-    
-    const formData = new FormData(form)
-    
-    try {
-      const encodedData = new URLSearchParams({
-        'form-name': 'contact',
-        ...Object.fromEntries(formData)
-      }).toString()
-      
-      console.log('Submitting to Netlify Forms:', encodedData)
-      
-      // Submit to Netlify Forms  
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodedData
-      })
-      
-      console.log('Response status:', response.status)
-      console.log('Response headers:', response.headers)
-      
-      // Netlify forms typically return 200 or 303
-      if (response.ok) {
-        setSubmitMessage({
-          type: 'success',
-          text: 'Thank you! We\'ll contact you within 24 hours.'
-        })
-        // Reset form
-        form.reset()
-      } else {
-        setSubmitMessage({
-          type: 'error',
-          text: 'Something went wrong. Please try again.'
-        })
-      }
-    } catch (error) {
-      setSubmitMessage({
-        type: 'error',
-        text: 'Failed to submit form. Please try again later.'
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  // Form submissions handled natively by Netlify
   return (
     <>
       <section className="relative min-h-screen bg-midnight overflow-hidden flex flex-col">
@@ -434,8 +382,10 @@ export default function HeroVictoryLane() {
                 <form 
                   name="contact"
                   method="POST"
-                  className="space-y-6" 
-                  onSubmit={handleSubmit}
+                  action="/"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  className="space-y-6"
                 >
                   {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
@@ -567,28 +517,13 @@ export default function HeroVictoryLane() {
                   {/* Submit Button */}
                   <motion.button
                     type="submit"
-                    disabled={isSubmitting}
                     className="w-full py-4 px-6 bg-midnight text-white font-bold text-lg rounded-lg hover:bg-black transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-black/50 disabled:opacity-50 disabled:cursor-not-allowed"
-                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    {isSubmitting ? 'SUBMITTING...' : 'SUBMIT CLAIM INFORMATION'}
+                    SUBMIT CLAIM INFORMATION
                   </motion.button>
                   
-                  {/* Success/Error Message */}
-                  {submitMessage && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className={`p-4 rounded-lg text-center ${
-                        submitMessage.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-500/30' 
-                          : 'bg-red-500/20 text-red-300 border border-red-500/30'
-                      }`}
-                    >
-                      {submitMessage.text}
-                    </motion.div>
-                  )}
                   
                   {/* Privacy Notice */}
                   <p className="text-sm text-white/80 text-center">
