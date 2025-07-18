@@ -319,28 +319,50 @@ All updates made to the athletic theme (black background with teal):
 - End Year (required text field, 2016-2023)
 - Additional Information (optional textarea)
 
-## 🚀 GO-LIVE CHECKLIST (After Approval)
+## 🚨 CRITICAL ISSUE: Netlify Forms Not Working
 
-### 1. **Email Service Setup** (PRIORITY)
-Choose one provider and implement:
+### Current Status (2025-01-18)
+**Problem**: Contact form submissions are not being captured by Netlify
+- Form shows "success" message to users
+- But NO submissions appear in Netlify Forms dashboard  
+- NO email notifications sent to configured addresses
+- Issue has persisted through 15+ attempted solutions over 2+ hours
 
-#### Option A: Resend (Recommended - Easiest)
-```bash
-npm install resend
-```
-- Sign up at resend.com
-- Get API key
-- Add to Netlify env: `RESEND_API_KEY`
-- Update `/app/api/contact/route.ts` with Resend code
+### What WORKS:
+- Simple HTML test form at `/test-form.html` worked perfectly
+- Test form had basic HTML with `data-netlify="true"` 
+- Submissions appeared in dashboard and emails were sent
 
-#### Option B: SendGrid
-- More complex setup but very reliable
-- Requires domain verification
-- Better for high volume
+### What DOESN'T WORK:
+- Main contact form in React component (`/components/HeroVictoryLane.tsx`)
+- Current implementation uses JavaScript to submit to `/public/contact.html`
+- `/public/contact.html` has a visible form for Netlify detection
 
-#### Option C: AWS SES
-- Most cost-effective for high volume
-- Requires AWS account setup
+### Failed Attempts:
+1. JavaScript submission to "/" endpoint
+2. JavaScript submission to "/contact.html" endpoint
+3. Native HTML form submission (no preventDefault)
+4. Hidden detection form in public/contact.html
+5. Visible form in public/contact.html
+6. Form in layout.tsx (caused Next.js plugin build errors)
+7. Static form in app directory
+8. Various data-netlify attribute combinations
+9. Removing/adding bot-field honeypot
+10. Using different form names
+11. URLSearchParams vs JSON body
+
+### Technical Details:
+- Next.js 14 with App Router
+- Netlify deployment with @netlify/plugin-nextjs v5.11.6
+- Form detection shows "contact" form exists in Netlify
+- Email notifications configured for 3 addresses
+- No console errors when submitting
+- Network shows 200 OK response but form data not captured
+
+### Key Mystery:
+Why does a simple HTML test form work perfectly, but the same approach fails for the main form in the React component?
+
+## 🚀 GO-LIVE CHECKLIST (After Form Issue Resolved)
 
 ### 2. **Domain Migration Steps**
 
@@ -385,11 +407,23 @@ Add these in Netlify dashboard:
 - **Email Handler**: `/app/api/contact/route.ts` (needs email service code)
 - **Links Config**: `/config/links-config.json`
 
-### Still Needed (Optional):
-- Phone number for contact link
-- Direct email for contact link
-- Privacy policy page/URL
-- Terms of service page/URL
+### Still Needed:
+- **CRITICAL**: Fix Netlify Forms submission issue
+- Phone number for contact link (optional)
+- Direct email for contact link (optional)
+
+### Current File Structure for Forms:
+```
+/components/HeroVictoryLane.tsx - Main React component with form
+  - Uses JavaScript fetch to submit to /contact.html
+  - Shows success/error messages
+  - Form has name="contact" 
+  
+/public/contact.html - Netlify detection form
+  - Visible form with data-netlify="true"
+  - Has all the same fields as React form
+  - Never seen by users
+```
 
 ---
 *This document serves as persistent memory for the project. Update after every significant decision or discovery.*
