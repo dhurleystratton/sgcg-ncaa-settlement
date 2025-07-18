@@ -13,21 +13,30 @@ export default function HeroVictoryLane() {
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    console.log('Form submission started')
     setIsSubmitting(true)
     setSubmitMessage(null)
     
     const formData = new FormData(e.currentTarget)
+    const formObject = Object.fromEntries(formData)
+    console.log('Form data:', formObject)
     
     try {
+      const encodedData = new URLSearchParams({
+        'form-name': 'contact',
+        ...formObject
+      }).toString()
+      console.log('Encoded data:', encodedData)
+      
       // Submit to Netlify Forms
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          ...Object.fromEntries(formData)
-        }).toString()
+        body: encodedData
       })
+      
+      console.log('Response status:', response.status)
+      console.log('Response ok:', response.ok)
       
       if (response.ok) {
         setSubmitMessage({
@@ -43,6 +52,7 @@ export default function HeroVictoryLane() {
         })
       }
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitMessage({
         type: 'error',
         text: 'Failed to submit form. Please try again later.'
