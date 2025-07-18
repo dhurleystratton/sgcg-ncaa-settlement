@@ -32,12 +32,4 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Alternate domain entries -->
-  <url>
-    <loc>https://nil-settlement.com/</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
 </urlset>
