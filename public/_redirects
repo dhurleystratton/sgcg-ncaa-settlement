@@ -1,0 +1,15 @@
+# Netlify redirects file
+# Force HTTPS and non-www
+
+# HTTP to HTTPS redirects
+http://ncaa-settlement.com/* https://ncaa-settlement.com/:splat 301!
+http://www.ncaa-settlement.com/* https://ncaa-settlement.com/:splat 301!
+
+# WWW to non-WWW redirect
+https://www.ncaa-settlement.com/* https://ncaa-settlement.com/:splat 301!
+
+# Handle nil-settlement.com domain (if it points to this Netlify site)
+https://nil-settlement.com/* https://ncaa-settlement.com/:splat 301!
+https://www.nil-settlement.com/* https://ncaa-settlement.com/:splat 301!
+http://nil-settlement.com/* https://ncaa-settlement.com/:splat 301!
+http://www.nil-settlement.com/* https://ncaa-settlement.com/:splat 301!
