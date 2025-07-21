@@ -421,6 +421,54 @@ Add these in Netlify dashboard:
 - Phone number for contact link (optional)
 - Direct email for contact link (optional)
 
+## NIL Onboarding Form (Squarespace) - Added 2025-01-20
+
+### Overview
+A standalone form created on Squarespace for collecting detailed athlete information during the agreement process. This form is NOT visible on the website navigation and is only accessible via direct link.
+
+### Form Details
+- **URL**: `https://sycamoregroveclaims.com/nil-onboarding-form`
+- **Platform**: Squarespace (using existing sycamoregroveclaims.com site)
+- **Status**: Unlinked page - not visible in site navigation
+- **Purpose**: Collect athlete data to populate agreements
+
+### Form Fields
+1. **Full Legal Name** (First & Last) - Required
+2. **Current Address** - Address field includes:
+   - Address Line 1 (Required)
+   - Address Line 2 (Optional)
+   - City (Required)
+   - State (Required)
+   - Zip (Required)
+3. **School(s) You Played For** - Required
+4. **Sport Played** - Required
+5. **School Email Address** - Required
+6. **Claim ID** - Optional (with help text: "Leave blank if you haven't received your Claim ID yet")
+7. **NCAA Eligibility Center ID** - Optional (with help text: "Leave blank if you don't have this information")
+
+### Email Configuration
+- **Primary Recipient**: info@sycamoregroveclaims.com
+- **Email Forwarding**: Set up to automatically forward to:
+  - dstratton@sycamoregroveclaims.com
+  - jowen@sycamoregroveclaims.com
+  - jodonnell@sycamoregroveclaims.com
+- **Subject Line**: "New NIL Onboarding Form Submission"
+
+### Advanced Features
+1. **Google Drive Integration**: Enabled for automatic spreadsheet backup of all submissions
+2. **Hidden Field Tracking**: Configured for brand ambassador attribution
+   - Field name: "source"
+   - Usage: Append `?source=AmbassadorName` to URL
+   - Example: `sycamoregroveclaims.com/nil-onboarding-form?source=JohnDoe`
+3. **Form Submissions Dashboard**: Access via Marketing → Form Submissions in Squarespace
+
+### Key Benefits
+- No need for third-party form service
+- Integrated with existing Squarespace infrastructure
+- Professional appearance matching main site branding
+- Automatic data backup to Google Drive
+- Brand ambassador performance tracking capability
+
 ### Current File Structure for Forms:
 ```
 /components/HeroVictoryLane.tsx - Main React component with form
@@ -433,6 +481,48 @@ Add these in Netlify dashboard:
   - Has all the same fields as React form
   - Never seen by users
 ```
+
+## SEO Fixes Implemented (2025-01-21)
+
+### Issues Identified via Google Search Console:
+1. **Page with redirect (3 pages)** - HTTP/HTTPS and www/non-www confusion
+2. **Not found 404 (1 page)** - /nil-settlement page in sitemap didn't exist
+3. **Duplicate canonical issue (1 page)** - Google choosing different canonical
+4. **Result**: 0 pages indexed, site invisible in Google
+
+### Fixes Applied:
+1. **Created `/netlify.toml`**:
+   - Forces all HTTP → HTTPS redirects
+   - Redirects www.ncaa-settlement.com → ncaa-settlement.com
+   - Added security headers and caching rules
+   - Configured Next.js plugin
+
+2. **Created `/public/_redirects`**:
+   - Backup redirect rules for Netlify
+   - Handles all HTTP/HTTPS and www/non-www scenarios
+   - Includes nil-settlement.com redirects
+
+3. **Updated `/public/sitemap.xml`**:
+   - Removed non-existent /nil-settlement page entry
+   - Updated lastmod date to 2025-01-21
+
+4. **Verified canonical URLs**:
+   - All already correctly point to https://ncaa-settlement.com
+
+### Deployment:
+- Changes pushed to GitHub: commit `6a373ec`
+- Netlify auto-deployed successfully
+- Redirects tested and working
+
+### Post-Deployment Actions:
+- ✅ Requested indexing for https://ncaa-settlement.com via GSC
+- ✅ Sitemap showing "Success" status in GSC
+- ⏳ Awaiting Google re-crawl (24-72 hours expected)
+
+### Expected Outcomes:
+- Redirect errors should clear within 3-7 days
+- Pages should move from "Not indexed" to "Indexed"
+- Site should start appearing in Google search results
 
 ---
 *This document serves as persistent memory for the project. Update after every significant decision or discovery.*
