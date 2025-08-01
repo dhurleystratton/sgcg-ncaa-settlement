@@ -4,38 +4,30 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Twitter, Linkedin, Instagram } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import LazySection from './LazySection'
 
 export default function HeroVictoryLane() {
-  const [referralCode, setReferralCode] = useState('')
-
   useEffect(() => {
     // Capture referral code from URL parameters
     const urlParams = new URLSearchParams(window.location.search)
     const ref = urlParams.get('ref')
+    
+    // Get the referral value (from URL or localStorage)
+    const referralValue = ref || localStorage.getItem('referralCode') || ''
+    
     if (ref) {
-      setReferralCode(ref)
-      // Store in localStorage to persist across page reloads
+      // Store new ref in localStorage
       localStorage.setItem('referralCode', ref)
-      
-      // Also update the hidden input directly for Netlify Forms
+    }
+    
+    // Set the value on the hidden input after a short delay to ensure DOM is ready
+    setTimeout(() => {
       const referralInput = document.querySelector('input[name="referral"]') as HTMLInputElement
       if (referralInput) {
-        referralInput.value = ref
+        referralInput.value = referralValue
       }
-    } else {
-      // Check localStorage in case they navigated away and came back
-      const storedRef = localStorage.getItem('referralCode')
-      if (storedRef) {
-        setReferralCode(storedRef)
-        // Update the hidden input
-        const referralInput = document.querySelector('input[name="referral"]') as HTMLInputElement
-        if (referralInput) {
-          referralInput.value = storedRef
-        }
-      }
-    }
+    }, 100)
   }, [])
 
   return (
