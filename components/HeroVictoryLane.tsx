@@ -4,9 +4,29 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Twitter, Linkedin, Instagram } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import LazySection from './LazySection'
 
 export default function HeroVictoryLane() {
+  const [referralCode, setReferralCode] = useState('')
+
+  useEffect(() => {
+    // Capture referral code from URL parameters
+    const urlParams = new URLSearchParams(window.location.search)
+    const ref = urlParams.get('ref')
+    if (ref) {
+      setReferralCode(ref)
+      // Optional: Store in localStorage to persist across page reloads
+      localStorage.setItem('referralCode', ref)
+    } else {
+      // Check localStorage in case they navigated away and came back
+      const storedRef = localStorage.getItem('referralCode')
+      if (storedRef) {
+        setReferralCode(storedRef)
+      }
+    }
+  }, [])
+
   return (
     <>
       <section className="relative min-h-screen bg-midnight overflow-hidden flex flex-col">
@@ -387,6 +407,7 @@ export default function HeroVictoryLane() {
                 >
                   {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="referral" value={referralCode} />
                   <p hidden>
                     <label>
                       Don't fill this out: <input name="bot-field" />
