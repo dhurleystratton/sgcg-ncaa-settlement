@@ -8,7 +8,7 @@
 
 ## Project Status
 **Current Phase**: LIVE - Fully launched and operational  
-**Last Updated**: 2025-01-18  
+**Last Updated**: 2025-08-01  
 **Status**: Site live at ncaa-settlement.com with working forms and SEO
 
 ### Current State Summary
@@ -523,6 +523,55 @@ A standalone form created on Squarespace for collecting detailed athlete informa
 - Redirect errors should clear within 3-7 days
 - Pages should move from "Not indexed" to "Indexed"
 - Site should start appearing in Google search results
+
+## Critical Fixes Implemented (2025-08-01)
+
+### 1. Mobile Form Submission Fix
+**Issue**: Form failed to submit in Instagram in-app browser with error "Failed to submit form. Please try again."
+**Root Cause**: JavaScript form handling with preventDefault() doesn't work in restricted browsers
+**Solution**: 
+- Removed all JavaScript form handling from HeroVictoryLane.tsx
+- Switched to direct HTML POST submission with action="/success.html"
+- Form now submits via standard HTML without JavaScript interference
+- Works in all browsers including Instagram's in-app browser
+
+### 2. Open Graph Image Redesign
+**Issue**: OG image had poor visibility with dark green background and only showed logo
+**Solution**: Created new OG image matching site design:
+- Black background (#0A0A0A) matching site's midnight color
+- "HOUSE VS NCAA" text in white-teal-white
+- "SELL YOUR CLAIM" button prominently displayed
+- Removed overlapping elements (NIL SETTLEMENT, SGCG branding)
+- Optimized positioning to work with text message metadata overlay
+- Created Node.js script (scripts/generate-og-image.js) for future updates
+
+### Key Files Added/Modified:
+- `/scripts/generate-og-image.js` - OG image generator script
+- `/components/HeroVictoryLane.tsx` - Fixed form submission
+- `/public/contact.html` - Updated hidden form for Netlify
+- `/public/og-image.png` - New OG image for social sharing
+
+## Project Folder Organization
+
+### Main Directories:
+- `/app` - Next.js 14 app directory with layout and globals
+- `/components` - React components (HeroVictoryLane, LazySection, etc.)
+- `/public` - Static assets, images, OG image, robots.txt, sitemap
+- `/scripts` - Utility scripts (OG image generator)
+- `/seo-diagnostics` - Screenshots and SEO analysis files
+- `/src/assets` - Additional assets and resources
+
+### Important Configuration Files:
+- `CLAUDE.md` - This file, project memory and documentation
+- `netlify.toml` - Netlify deployment and redirect configuration  
+- `tailwind.config.ts` - Design system colors and fonts
+- `/config/links-config.json` - Centralized URL configuration
+
+### Development Commands:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run linting checks
+- `node scripts/generate-og-image.js` - Regenerate OG image
 
 ---
 *This document serves as persistent memory for the project. Update after every significant decision or discovery.*

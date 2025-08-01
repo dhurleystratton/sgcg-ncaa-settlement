@@ -1,3 +1,19 @@
+/**
+ * Open Graph Image Generator for NCAA Settlement Site
+ * 
+ * This script generates the OG image that appears when the site is shared
+ * on social media or via text messages.
+ * 
+ * Design specifications:
+ * - Black background (#0A0A0A) matching site's midnight color
+ * - "HOUSE VS NCAA" text with teal VS
+ * - "SELL YOUR CLAIM" button
+ * - No overlapping elements to work with text message metadata
+ * 
+ * Usage: node scripts/generate-og-image.js
+ * Output: public/og-image.png (1200x630px)
+ */
+
 const { createCanvas, registerFont } = require('canvas');
 const fs = require('fs');
 const path = require('path');
