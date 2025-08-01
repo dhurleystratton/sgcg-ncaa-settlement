@@ -49,20 +49,20 @@ ctx.textBaseline = 'middle';
 const centerX = width / 2;
 let currentY = 180;
 
-// HOUSE - larger size
-ctx.font = 'bold 140px Arial, sans-serif';
+// HOUSE - using condensed font style similar to Bebas Neue
+ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.white;
 ctx.fillText('HOUSE', centerX, currentY);
 
 // VS - same size as other text, with proper spacing
-currentY += 120; // More space to prevent overlap
-ctx.font = 'bold 140px Arial, sans-serif';
+currentY += 130; // More space to prevent overlap
+ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.teal;
 ctx.fillText('VS', centerX, currentY);
 
 // NCAA - same size as HOUSE
-currentY += 120; // Consistent spacing
-ctx.font = 'bold 140px Arial, sans-serif';
+currentY += 130; // Consistent spacing
+ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.white;
 ctx.fillText('NCAA', centerX, currentY);
 
@@ -106,11 +106,7 @@ ctx.font = 'bold 48px Arial, sans-serif';
 ctx.fillStyle = colors.teal;
 ctx.fillText('SELL YOUR CLAIM', centerX, currentY);
 
-// Add small branding at bottom
-ctx.font = '16px Arial, sans-serif';
-ctx.fillStyle = colors.white;
-ctx.globalAlpha = 0.7;
-ctx.fillText('Sycamore Grove Claims Group', centerX, height - 30);
+// Removed Sycamore Grove Claims Group text to avoid overlap
 
 // Save the image
 const buffer = canvas.toBuffer('image/png');
