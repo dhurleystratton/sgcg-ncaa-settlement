@@ -66,43 +66,23 @@ ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.white;
 ctx.fillText('NCAA', centerX, currentY);
 
-// (NIL) SETTLEMENT subtitle
-currentY += 80;
-ctx.font = '36px Arial, sans-serif';
-ctx.fillStyle = colors.teal;
-// Add letter spacing manually since canvas doesn't support letterSpacing
-const text = '(NIL) SETTLEMENT';
-const letterSpacing = 8;
-// Calculate total width including letter spacing
-let totalWidth = 0;
-for (let i = 0; i < text.length; i++) {
-  totalWidth += ctx.measureText(text[i]).width;
-  if (i < text.length - 1) totalWidth += letterSpacing;
-}
-// Draw each letter with spacing
-let x = centerX - totalWidth / 2;
-for (let i = 0; i < text.length; i++) {
-  ctx.fillText(text[i], x + ctx.measureText(text[i]).width / 2, currentY);
-  x += ctx.measureText(text[i]).width + letterSpacing;
-}
-
-// SELL YOUR CLAIM button
-currentY += 100;
+// SELL YOUR CLAIM button - moved up to avoid metadata overlay
+currentY += 110; // Reduced spacing since we removed (NIL) SETTLEMENT
 
 // Button background with glow effect
 ctx.shadowColor = colors.teal;
-ctx.shadowBlur = 30;
+ctx.shadowBlur = 40;
 ctx.fillStyle = colors.midnight;
-ctx.fillRect(centerX - 250, currentY - 35, 500, 70);
+ctx.fillRect(centerX - 280, currentY - 40, 560, 80);
 
 // Button border
 ctx.strokeStyle = colors.teal;
-ctx.lineWidth = 3;
-ctx.strokeRect(centerX - 250, currentY - 35, 500, 70);
+ctx.lineWidth = 4;
+ctx.strokeRect(centerX - 280, currentY - 40, 560, 80);
 
 // Button text
 ctx.shadowBlur = 0;
-ctx.font = 'bold 48px Arial, sans-serif';
+ctx.font = 'bold 56px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.teal;
 ctx.fillText('SELL YOUR CLAIM', centerX, currentY);
 
