@@ -19,6 +19,9 @@ export default function HeroVictoryLane() {
     if (ref) {
       // Store new ref in localStorage
       localStorage.setItem('referralCode', ref)
+      
+      // Clean the URL without losing the referral
+      window.history.replaceState({}, document.title, window.location.pathname)
     }
     
     // Set the value on the hidden input after a short delay to ensure DOM is ready
