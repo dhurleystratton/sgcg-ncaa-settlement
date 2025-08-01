@@ -8,9 +8,9 @@ const height = 630;
 const canvas = createCanvas(width, height);
 const ctx = canvas.getContext('2d');
 
-// Colors from the site
+// Colors from the site (exact values from Tailwind config)
 const colors = {
-  midnight: '#0A1628',
+  midnight: '#0A0A0A',
   teal: '#439aa3',
   white: '#FFFFFF',
   tealDark: '#0a423b'
@@ -47,31 +47,44 @@ ctx.textBaseline = 'middle';
 
 // Main title - HOUSE VS NCAA
 const centerX = width / 2;
-let currentY = 200;
+let currentY = 180;
 
-// HOUSE
-ctx.font = 'bold 120px Arial, sans-serif';
+// HOUSE - larger size
+ctx.font = 'bold 140px Arial, sans-serif';
 ctx.fillStyle = colors.white;
 ctx.fillText('HOUSE', centerX, currentY);
 
-// VS
-currentY += 90;
-ctx.font = 'bold 120px Arial, sans-serif';
+// VS - same size as other text, with proper spacing
+currentY += 120; // More space to prevent overlap
+ctx.font = 'bold 140px Arial, sans-serif';
 ctx.fillStyle = colors.teal;
 ctx.fillText('VS', centerX, currentY);
 
-// NCAA
-currentY += 90;
-ctx.font = 'bold 120px Arial, sans-serif';
+// NCAA - same size as HOUSE
+currentY += 120; // Consistent spacing
+ctx.font = 'bold 140px Arial, sans-serif';
 ctx.fillStyle = colors.white;
 ctx.fillText('NCAA', centerX, currentY);
 
 // (NIL) SETTLEMENT subtitle
-currentY += 70;
-ctx.font = '32px Arial, sans-serif';
+currentY += 80;
+ctx.font = '36px Arial, sans-serif';
 ctx.fillStyle = colors.teal;
-ctx.letterSpacing = '0.3em';
-ctx.fillText('(NIL) SETTLEMENT', centerX, currentY);
+// Add letter spacing manually since canvas doesn't support letterSpacing
+const text = '(NIL) SETTLEMENT';
+const letterSpacing = 8;
+// Calculate total width including letter spacing
+let totalWidth = 0;
+for (let i = 0; i < text.length; i++) {
+  totalWidth += ctx.measureText(text[i]).width;
+  if (i < text.length - 1) totalWidth += letterSpacing;
+}
+// Draw each letter with spacing
+let x = centerX - totalWidth / 2;
+for (let i = 0; i < text.length; i++) {
+  ctx.fillText(text[i], x + ctx.measureText(text[i]).width / 2, currentY);
+  x += ctx.measureText(text[i]).width + letterSpacing;
+}
 
 // SELL YOUR CLAIM button
 currentY += 100;
