@@ -16,13 +16,24 @@ export default function HeroVictoryLane() {
     const ref = urlParams.get('ref')
     if (ref) {
       setReferralCode(ref)
-      // Optional: Store in localStorage to persist across page reloads
+      // Store in localStorage to persist across page reloads
       localStorage.setItem('referralCode', ref)
+      
+      // Also update the hidden input directly for Netlify Forms
+      const referralInput = document.querySelector('input[name="referral"]') as HTMLInputElement
+      if (referralInput) {
+        referralInput.value = ref
+      }
     } else {
       // Check localStorage in case they navigated away and came back
       const storedRef = localStorage.getItem('referralCode')
       if (storedRef) {
         setReferralCode(storedRef)
+        // Update the hidden input
+        const referralInput = document.querySelector('input[name="referral"]') as HTMLInputElement
+        if (referralInput) {
+          referralInput.value = storedRef
+        }
       }
     }
   }, [])
@@ -407,7 +418,7 @@ export default function HeroVictoryLane() {
                 >
                   {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
-                  <input type="hidden" name="referral" value={referralCode} />
+                  <input type="hidden" name="referral" />
                   <p hidden>
                     <label>
                       Don't fill this out: <input name="bot-field" />
