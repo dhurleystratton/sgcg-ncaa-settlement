@@ -47,7 +47,7 @@ ctx.textBaseline = 'middle';
 
 // Main title - HOUSE VS NCAA
 const centerX = width / 2;
-let currentY = 180;
+let currentY = 140; // Moved up from 180 to create more space below
 
 // HOUSE - using condensed font style similar to Bebas Neue
 ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
@@ -55,19 +55,19 @@ ctx.fillStyle = colors.white;
 ctx.fillText('HOUSE', centerX, currentY);
 
 // VS - same size as other text, with proper spacing
-currentY += 130; // More space to prevent overlap
+currentY += 120; // Slightly reduced from 130
 ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.teal;
 ctx.fillText('VS', centerX, currentY);
 
 // NCAA - same size as HOUSE
-currentY += 130; // Consistent spacing
+currentY += 120; // Consistent spacing
 ctx.font = 'bold 160px Arial Black, Impact, sans-serif';
 ctx.fillStyle = colors.white;
 ctx.fillText('NCAA', centerX, currentY);
 
-// SELL YOUR CLAIM button - moved up to avoid metadata overlay
-currentY += 110; // Reduced spacing since we removed (NIL) SETTLEMENT
+// SELL YOUR CLAIM button - add more space between NCAA and button
+currentY += 150; // Increased from 110 to create breathing room
 
 // Button background with glow effect
 ctx.shadowColor = colors.teal;
