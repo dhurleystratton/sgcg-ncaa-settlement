@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals-excellence.css'
+import TestimonialTicker from '@/components/TestimonialTicker'
 
 export const metadata: Metadata = {
   title: 'NCAA Settlement - Sell Your NIL Claim | Sycamore Grove Claims Group',
@@ -137,6 +138,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-midnight">
+        <TestimonialTicker />
         {children}
       </body>
     </html>
