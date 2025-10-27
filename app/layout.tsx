@@ -4,8 +4,8 @@ import TestimonialTicker from '@/components/TestimonialTicker'
 
 export const metadata: Metadata = {
   title: 'NCAA Settlement - Sell Your NIL Claim | Sycamore Grove Claims Group',
-  description: 'Get your House vs NCAA (NIL) settlement money now. Former D1 athletes (2016-2024) can sell their claims for immediate payment instead of waiting 10 years.',
-  keywords: 'NIL settlement, House vs NCAA, NCAA settlement claims, sell NIL claim, Division 1 athlete settlement, NIL claim value, NCAA settlement payment, D1 athlete compensation, NIL back pay, college athlete settlement',
+  description: 'Get your House vs NCAA (NIL) settlement money now. Former D1 athletes (2016-2024) can sell their claims for immediate payment instead of waiting 10+ years. Accelerate your NIL settlement payout today.',
+  keywords: 'NIL settlement, NIL lawsuit settlement, House vs NCAA, NCAA settlement claims, sell NIL claim, sell NCAA settlement claim, Division 1 athlete settlement, NIL claim value, NCAA settlement payment, NIL settlement payout date, D1 athlete compensation, NIL back pay, college athlete settlement, NIL lawsuit, accelerate NIL settlement',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
   authors: [{ name: 'Sycamore Grove Claims Group' }],
   creator: 'Sycamore Grove Claims Group',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'NCAA Settlement - Get Paid Now | SGCG',
-    description: 'Former Division I athletes (2016-2024) can sell their NIL settlement claims for immediate cash payment. No waiting 10+ years for NCAA payments.',
+    description: 'Former Division I athletes (2016-2024) can sell their NIL lawsuit settlement claims for immediate cash payment. Accelerate your payout - no waiting 10+ years for NCAA payments.',
     url: 'https://ncaa-settlement.com',
     siteName: 'NCAA Settlement by SGCG',
     images: [
@@ -118,6 +118,22 @@ const jsonLd = [
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Your settlement value depends on various factors including your sport, years played, and performance level. Submit your information for a personalized valuation.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'When will I get my NIL settlement payment if I sell to SGCG?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'When you sell your claim to Sycamore Grove Claims Group, you receive immediate payment instead of waiting 10+ years for the NCAA defendants to make installment payments. SGCG has already purchased claims from over 1,000 NCAA athletes.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I sell my NCAA settlement claim?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Submit your information through our contact form including your name, email, school, sport, and years played (2016-2024). Our team will review your eligibility and provide a personalized offer for your NIL lawsuit settlement claim.'
         }
       }
     ]

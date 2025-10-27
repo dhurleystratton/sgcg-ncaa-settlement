@@ -1,0 +1,19 @@
+Word,Cost,Clicks,Impressions,Conversions,Top Containing Queries
+nil,$1.93,2,42,0.00,"(nil settlement, nil settlement update, nil)"
+settlement,$0.00,0,29,0.00,"(nil settlement, nil settlement update, sell your ncaa settlement claim)"
+lawsuit,$0.95,1,7,0.00,"(nil lawsuit, ncaa nil lawsuit settlement, nil compensation lawsuit)"
+ncaa,$0.97,1,6,0.00,"(sell your ncaa settlement claim, ncaa nil lawsuit settlement, ncaa nil settlement)"
+update,$0.00,0,5,0.00,"(nil settlement update, nil lawsuit update)"
+claim,$0.97,1,5,0.00,"(nil claim, sell your ncaa settlement claim, sell ncaa claim)"
+payout,$0.00,0,4,0.00,"(ncaa nil settlement payout date, nil lawsuit payout, nil settlement payout)"
+nil compensation,$0.00,0,4,0.00,"(nil compensation, nil compensation lawsuit)"
+sell,$0.97,1,3,0.00,"(sell your ncaa settlement claim, sell ncaa claim)"
+your,$0.00,0,2,0.00,(sell your ncaa settlement claim)
+payout date,$0.00,0,2,0.00,"(ncaa nil settlement payout date, nil settlement payout date)"
+house settlement,$0.00,0,2,0.00,"(college athlete nil litigation house settlement, nil house settlement)"
+back pay,$0.00,0,2,0.00,"(nil back pay, nil settlement back pay)"
+college,$0.00,0,1,0.00,(college athlete nil litigation house settlement)
+agreement,$0.00,0,1,0.00,(nil settlement agreement)
+athlete,$0.00,0,1,0.00,(college athlete nil litigation house settlement)
+litigation,$0.00,0,1,0.00,(college athlete nil litigation house settlement)
+claims,$0.00,0,1,0.00,(nil claims)

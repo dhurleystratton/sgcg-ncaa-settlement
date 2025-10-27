@@ -168,12 +168,26 @@ export default function HeroVictoryLane() {
             </div>
           </motion.div>
 
+          {/* Credibility Badge */}
+          <motion.div
+            className="mt-6 md:mt-8 flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="inline-flex items-center px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-midnight/80 backdrop-blur-md border-2 border-brand-teal/40 rounded-full">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 text-center leading-relaxed">
+                <span className="font-semibold text-brand-teal">Sycamore Grove</span> has purchased settlement claims from over <span className="font-bold text-brand-teal">1,000 NCAA athletes</span>
+              </p>
+            </div>
+          </motion.div>
+
           {/* Finish Line with CTA */}
           <motion.div
             className="mt-6 md:mt-8 relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             {/* Finish Line Graphics */}
             <div className="relative">
@@ -313,12 +327,20 @@ export default function HeroVictoryLane() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-2 md:gap-4 text-xs sm:text-sm md:text-base">
             <span className="font-semibold text-white">Sycamore Grove Claims Group</span>
             <span className="hidden md:inline text-brand-teal/40">•</span>
-            <Link 
-              href="https://www.sycamoregroveclaims.com/nil-settlement" 
+            <Link
+              href="https://www.sycamoregroveclaims.com/nil-settlement"
               target="_blank"
               className="text-brand-teal/70 hover:text-brand-teal transition-colors underline underline-offset-2"
             >
               Learn More
+            </Link>
+            <span className="hidden md:inline text-brand-teal/40">•</span>
+            <Link
+              href="https://www.sycamoregroveclaims.com/faqs"
+              target="_blank"
+              className="text-brand-teal/70 hover:text-brand-teal transition-colors underline underline-offset-2"
+            >
+              Tax Disclaimer
             </Link>
           </div>
         </div>
