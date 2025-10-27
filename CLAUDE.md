@@ -755,6 +755,233 @@ A standalone form created on Squarespace for collecting detailed athlete informa
 5. **Ongoing**: Monitor conversion rate improvements from credibility badge
 6. **Strategic Discussion**: Consult on campaign analysis, budget allocation, and any insights that may impact strategy
 
+---
+
+## 🎯 ACTION ITEMS FOR NEXT SESSION (Squarespace Optimization)
+
+### Session Date: October 28, 2025 (Tomorrow)
+**Goal**: Optimize Squarespace landing page to improve Google Ads Quality Score and conversion rates
+
+### ✅ Information to Gather (Dennis):
+
+#### 1. Squarespace Analytics (Oct 23-25, 2025)
+- [ ] Total form submissions on /nil-settlement page
+- [ ] Traffic sources breakdown (paid vs organic)
+- [ ] Mobile vs desktop conversion rates
+- [ ] Form abandonment rate (if available)
+- [ ] Bounce rate on /nil-settlement page
+- [ ] Average time on page
+
+#### 2. Google Ads Data
+- [ ] Check Quality Score for keywords (Add columns: Quality Score, Landing Page Experience, Expected CTR, Ad Relevance)
+- [ ] Screenshot Quality Scores for "NIL lawsuit" and "Sell NCAA claim"
+- [ ] Copy/paste actual ad copy text (headlines and descriptions)
+- [ ] Note if any ads were disapproved or flagged
+
+#### 3. Legal/Compliance Requirements
+- [ ] Identify which copy elements CANNOT be changed (legal requirements)
+- [ ] Clarify if headlines can use "NIL lawsuit settlement" terminology
+- [ ] Confirm if "accelerated payment" language is compliant
+- [ ] Note any FTC/regulatory restrictions on claims
+
+### 📝 Squarespace Copy Optimization Checklist
+
+#### Priority 1: Message Match Fixes (CRITICAL for Quality Score)
+
+**Current Issues Identified:**
+- ❌ Landing page headline: "In re: College Athlete NIL Litigation (House) vs. NCAA" (too legal/formal)
+- ❌ Headline doesn't match ad keywords ("NIL lawsuit" and "Sell NCAA claim")
+- ❌ Keywords not prominent in first paragraph
+- ❌ Submit button says "SEND" (not benefit-focused)
+
+**Recommended Changes (pending legal review):**
+
+**A. Page Title & Meta Description**
+- [ ] Update SEO Page Title to: "Sell Your NCAA Settlement Claim | Get Paid Now - Sycamore Grove"
+- [ ] Update Meta Description to: "Former D1 athletes: Sell your NIL lawsuit settlement claim for accelerated payment. Don't wait 10+ years. 1,000+ athletes served. Submit info today."
+
+**B. Headline (H1) Options** (choose most compliant):
+- [ ] Option 1: "Sell Your NCAA NIL Lawsuit Settlement Claim"
+- [ ] Option 2: "Sell Your NCAA Settlement Claim - Get Accelerated Payment"
+- [ ] Option 3: "NCAA NIL Settlement - Sell Your Claim Today"
+- [ ] Option 4: Keep current legal language (if required for compliance)
+
+**C. Subheadline** (add below H1):
+- [ ] "Get accelerated payment instead of waiting 10+ years for installment payments"
+- [ ] OR: "Don't wait a decade - 1,000+ athletes have already sold their claims"
+
+**D. First Paragraph** (keyword optimization):
+```
+Replace current intro with keyword-rich paragraph (if legally compliant):
+
+"Are you a Division I athlete who competed between 2016-2024? The NCAA
+and Power Five conferences agreed to a $2.8 billion NIL lawsuit settlement
+- but payments are scheduled over 10 years. Sycamore Grove specializes in
+purchasing settlement claims, allowing you to sell your NCAA claim for
+accelerated payment today."
+```
+- [ ] Review with legal team
+- [ ] Implement if approved
+
+**E. Trust Signals Section** (add above form):
+```
+✓ Over 1,000 NCAA Athletes Served
+✓ $380M+ Paid to Claimants in 2024
+✓ Decades of Experience Purchasing Claims
+```
+- [ ] Add as bullet points or icons above form
+- [ ] Use teal color to match branding
+
+**F. Submit Button Text** (change from "SEND"):
+- [ ] Option 1: "SUBMIT CLAIM INFORMATION" (matches ncaa-settlement.com)
+- [ ] Option 2: "GET MY EVALUATION"
+- [ ] Option 3: "START MY CLAIM PROCESS"
+
+#### Priority 2: SEO Technical Optimization
+
+**Squarespace Settings to Verify:**
+- [ ] SSL enabled (https://)
+- [ ] Sitemap auto-generation enabled
+- [ ] Clean URLs (no /p/ or /s/ prefixes)
+- [ ] Mobile-friendly pages verified
+- [ ] Page load speed under 3 seconds
+
+**Schema Markup** (if Squarespace allows):
+- [ ] Add Organization schema (Sycamore Grove info)
+- [ ] Add Service schema (claims purchasing service)
+- [ ] Add LocalBusiness schema (Southport, CT address)
+
+#### Priority 3: Content Additions (Optional)
+
+**FAQ Section** (add below form):
+- [ ] "How long does the process take?" → 24-48 hour response
+- [ ] "Do I have to wait 10 years?" → No, accelerated payment available
+- [ ] "How much is my claim worth?" → Submit for personalized evaluation
+- [ ] "Is this legitimate?" → 1,000+ athletes, $380M+ track record
+
+**Additional Trust Elements:**
+- [ ] Add phone number prominently: 646-974-8194
+- [ ] Add business address: 107 John Street, Southport, CT 06890
+- [ ] Link to Better Business Bureau (if applicable)
+- [ ] Add security badges (if available)
+
+#### Priority 4: Form Optimization
+
+**Current Form Analysis:**
+- 3 required fields (Name, Phone, Email) ✅ Good!
+- 7 optional fields = thorough qualification ✅
+- Google reCAPTCHA enabled ✅
+
+**Potential Improvements:**
+- [ ] Add progress indicator for multi-field form (if Squarespace allows)
+- [ ] Add inline validation (check email format in real-time)
+- [ ] Consider A/B testing: 3-field simple form vs current detailed form
+- [ ] Add "Why we ask" tooltips for optional fields
+
+**Form Field Labels** (clarify purpose):
+- [ ] "Claim ID" → Add helper text: "We'll help you find this if you don't have it"
+- [ ] "NCAA Eligibility Center ID" → Add: "Optional - helps us verify your eligibility faster"
+
+### 📊 Conversion Tracking Setup
+
+**Squarespace Form Analytics:**
+- [ ] Verify form submissions are tracked in Squarespace analytics
+- [ ] Check if form completion rate is available
+- [ ] Enable email notifications for all submissions
+- [ ] Set up Google Analytics goal for form completion (if not already)
+
+**Google Ads Conversion Tracking:**
+- [ ] Check if conversion tracking pixel is installed on Squarespace
+- [ ] If not: Install Google Ads conversion pixel on thank-you/success page
+- [ ] Test conversion tracking with test submission
+- [ ] Import conversions into Google Ads (to calculate true ROI)
+
+### 🎨 Visual/Design Recommendations
+
+**Above-the-Fold Optimization:**
+- [ ] Ensure form is visible above fold on mobile (or clear CTA to scroll)
+- [ ] Add directional arrow or "Scroll to submit your claim" if form is below fold
+- [ ] Consider hero image of athlete celebrating (if legally/ethically appropriate)
+
+**Trust Badge Placement:**
+- [ ] "$380M+" stat should be in first screen view
+- [ ] "1,000+ athletes" should be prominently displayed
+- [ ] Consider adding athlete testimonials (if available and compliant)
+
+### 📈 Google Ads Immediate Optimizations
+
+**These can be done regardless of landing page changes:**
+
+- [ ] Pause 29 keywords with zero impressions
+- [ ] Increase bid on "NIL lawsuit" by 100%
+- [ ] Increase bid on "Sell NCAA claim" by 150%
+- [ ] Add negative keywords: "update", "news", "how much", "eligibility center"
+- [ ] Set ad schedule: Saturday 1-4 PM (+150% bid adjustment)
+- [ ] Set mobile bid adjustment: +50%
+- [ ] Set age bid adjustments: 18-24 (+30%), 25-34 (+20%), 45+ (-20%)
+- [ ] Add 15 new exact match keywords from strategy doc
+
+### 🔍 Quality Score Investigation
+
+**Understanding Current Performance:**
+- [ ] Document current Quality Score for top 5 keywords
+- [ ] Identify which component is dragging score down (CTR/Relevance/Landing Page)
+- [ ] Compare before/after Quality Scores after landing page updates
+- [ ] Calculate expected CPC reduction if Quality Score improves
+
+**Target Benchmarks:**
+- Current CTR: 42.86% (NIL lawsuit), 100% (Sell NCAA claim) ✅ EXCELLENT
+- Target Quality Score: 8-10 (currently unknown)
+- Target CPC after optimization: $0.50-0.75 (currently $0.94)
+
+### 📋 Decision Points for Tomorrow's Session
+
+**Questions to Answer:**
+1. Which headline option is most compliant with legal requirements?
+2. Can we use "NIL lawsuit settlement" terminology freely?
+3. Is "accelerated payment" approved language?
+4. What was the actual conversion rate from Google Ads (need Squarespace data)?
+5. Should we A/B test a simpler 3-field form vs. current form?
+6. Do we want to add facilitator tracking to the main /nil-settlement form?
+
+### ✅ Success Metrics (To Measure After Changes)
+
+**Week 1 (After Optimization):**
+- Quality Score increases by 1-2 points
+- CPC decreases by 20-40%
+- CTR maintains above 30% (already high)
+- Conversion rate increases by 10-20%
+
+**Month 1:**
+- Cost per conversion decreases to $30-40
+- Total conversions increase to 50-100/month
+- Quality Score stabilizes at 8+
+- Ad spend efficiency improves 30-50%
+
+---
+
+## 📝 Notes for Next Session
+
+**Key Insights from Today:**
+- Google Ads traffic goes to Squarespace /nil-settlement page (NOT ncaa-settlement.com)
+- ncaa-settlement.com is for organic SEO traffic → redirects to Squarespace
+- Message match issue: Ad keywords don't match landing page headline
+- High CTR (42%, 100%) proves targeting is perfect
+- Landing page experience likely dragging Quality Score down
+- Form friction is intentional for lead qualification (keep it)
+- Legal compliance is priority - must review all copy changes
+
+**Files to Review:**
+- `/google-adsense/GOOGLE_ADS_OPTIMIZATION_STRATEGY.md` - Full strategy
+- `/google-adsense/META_ADVERTISING_STRATEGY.md` - Social media plan
+- Both assume Squarespace is landing page (correctly)
+
+**Ready for Tomorrow:**
+- Squarespace optimization checklist prepared
+- Copy recommendations drafted (pending legal review)
+- Google Ads tactical changes documented
+- Quality Score investigation framework ready
+
 ### Files Modified:
 - `app/layout.tsx` - SEO metadata improvements
 - `components/HeroVictoryLane.tsx` - Credibility badge + tax disclaimer link
